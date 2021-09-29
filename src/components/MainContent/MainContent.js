@@ -5,6 +5,7 @@ import data from '../../data';
 import MaxWidthWrapper from '../MaxWidthWrapper';
 import PhotoGridItem from '../PhotoGridItem';
 import VisuallyHidden from '../VisuallyHidden';
+import { mapSources } from '../../utils';
 
 const MainContent = () => {
   return (
@@ -12,13 +13,14 @@ const MainContent = () => {
       <VisuallyHidden>
         <h1>All Photos</h1>
       </VisuallyHidden>
-      {data.map(({ id, src, alt, tags }) => (
+      {mapSources(data).map(({ id, src, alt, tags, sources }) => (
         <PhotoGridItem
           key={id}
           id={id}
           src={src}
           alt={alt}
           tags={tags}
+          sources={sources}
         />
       ))}
     </Wrapper>
