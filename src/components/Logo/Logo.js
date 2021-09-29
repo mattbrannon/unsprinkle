@@ -6,10 +6,14 @@ const Logo = () => {
 };
 
 const Wrapper = styled.a`
-  font-size: 1.25rem;
+  font-size: 1.1rem;
   font-weight: 750;
   color: inherit;
   text-decoration: none;
+
+  @media (min-width: 36rem) {
+    font-size: 1.25rem;
+  }
 `;
 
 export default Logo;

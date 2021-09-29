@@ -14,13 +14,13 @@ const Header = () => {
         <DesktopNav>
           <NavList>
             <li>
-              <NavLink href="">Categories</NavLink>
+              <NavLink href="#">Categories</NavLink>
             </li>
             <li>
-              <NavLink href="">Submissions</NavLink>
+              <NavLink href="#">Submissions</NavLink>
             </li>
             <li>
-              <NavLink href="">Sign Up</NavLink>
+              <NavLink href="#">Sign Up</NavLink>
             </li>
           </NavList>
         </DesktopNav>
@@ -36,8 +36,11 @@ const Wrapper = styled.header`
 const InnerWrapper = styled(MaxWidthWrapper)`
   display: flex;
   align-items: center;
-  gap: 48px;
+  gap: 16px;
   padding: 16px 32px;
+  @media (min-width: 36rem) {
+    gap: 48px;
+  }
 `;
 
 const DesktopNav = styled.nav`
@@ -51,6 +54,7 @@ const DesktopNav = styled.nav`
 
 const GrowingSearchInput = styled(SearchInput)`
   flex: 1;
+  min-width: 200px;
 `;
 
 const NavList = styled.ul`
